@@ -17,10 +17,10 @@ This project includes my personal website server files made by React.Js and Java
 5. DBeaver is recomended for database connections.
 
 ## Database informations:**
-* Database user name: berkay
-* Şifre: 1234
-* Port: 1521
-* Service name: XEPDB1
+* **Database user name:** berkay
+* **Şifre:** 1234
+* **Port:** 1521
+* **Service name:** XEPDB1
 
 ### Notes
 * **Clean Docker Oracle setup command:** docker run -d --name oracle-db -p 1522:1521 -e ORACLE_PASSWORD=1234 -e APP_USER=berkay -e APP_USER_PASSWORD=1234 gvenzl/oracle-xe
