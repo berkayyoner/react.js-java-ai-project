@@ -20,5 +20,5 @@ This project includes my personal website server files made by React.Js and Java
 * Service name: XEPDB1
 
 ### Notes
-* Clean Docker Oracle setup command: docker run -d --name oracle-db -p 1522:1521 -e ORACLE_PASSWORD=1234 -e APP_USER=berkay -e APP_USER_PASSWORD=1234 gvenzl/oracle-xe
-* Redis run command: docker run -d --name redis -p 6379:6379 redis
+* **Clean Docker Oracle setup command:** docker run -d --name oracle-db -p 1522:1521 -e ORACLE_PASSWORD=1234 -e APP_USER=berkay -e APP_USER_PASSWORD=1234 gvenzl/oracle-xe
+* **Redis run command:** docker run -d --name redis -p 6379:6379 redis
