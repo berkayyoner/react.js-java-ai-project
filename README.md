@@ -16,6 +16,8 @@ This project includes my personal website server files made by React.Js and Java
 3. Import Docker image in the project to your Docker application for Oracle database and redis.
 4. Install Java 24 for back-end project.
 5. DBeaver is recomended for database connections.
+6. Edit config.json from front-end>src directory.
+7. Go to front-end project directory on Terminal or CMD by "cd directory" command. Run the frond-end project by "npm start" command.
 
 ## Database informations
 * **Database user name:** berkay
