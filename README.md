@@ -12,8 +12,8 @@ This project includes my personal website server files made by React.Js and Java
 
 ## Setups
 1. Install Node.Js for front-end project.
-2. Install Docker for database.
-3. Import Docker image in the project to your Docker application for Oracle database and redis.
+2. Install Docker for database and redis server.
+3. Import Docker image in the project directory to your Docker application. Run Oracle and Redis servers.
 4. Install JDK 21 for back-end project. (https://adoptium.net/en-GB/temurin/releases?version=21&os=any&arch=any)
 5. DBeaver is recomended for database connections.
 6. Edit config.json from front-end>src directory.
