@@ -1,6 +1,7 @@
 # About This Project
 This project includes my personal website server files made by React.Js and Java Springboot.
-.
+
+## Including
 * **Front-End:** React.Js (includes Axios and Redux)
 * **Back-End:** Java (Spring Boot, Hibernate and Maven)
 * **Database:** Oracle SQL
