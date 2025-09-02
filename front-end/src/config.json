@@ -1,0 +1,4 @@
+{
+    "baseURL": "http://localhost:8080/api",
+    "supportedLanguages": ["en", "tr"]
+}

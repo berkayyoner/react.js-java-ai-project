@@ -1,0 +1,9 @@
+@font-face { font-family: Spotify Circular; src: url('./assets/fonts/CircularSpotifyText-Medium.otf'); } 
+@font-face { font-family: Spotify Circular; font-weight: bold; src: url('./assets/fonts/CircularSpotifyText-Bold.otf');}
+
+body {
+  margin: 0;
+  font-family: Spotify Circular, sans-serif;
+  background-color: #121212;
+  color: #b6b6b6;
+}
