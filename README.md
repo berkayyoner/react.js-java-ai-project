@@ -17,7 +17,7 @@ This project includes my personal website server files made by React.Js and Java
 4. Install Java 24 for back-end project.
 5. DBeaver is recomended for database connections.
 
-## Database informations:
+## Database informations
 * **Database user name:** berkay
 * **Şifre:** 1234
 * **Port:** 1521
