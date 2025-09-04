@@ -12,7 +12,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.Oracle12cDialect
+        dialect: org.hibernate.dialect.OracleDialect
     show-sql: true
 
   cache:

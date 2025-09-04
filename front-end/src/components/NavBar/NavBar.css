@@ -46,3 +46,8 @@ li:hover {
 .navbar-highlighted a {
   color: white;
 }
+
+.logo {
+  height: 40px;
+  width: auto;
+}

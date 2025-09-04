@@ -19,24 +19,24 @@ function NavBar({ selectedButton }) {
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" className="logo" />
       </div>
 
       <ul>
         <li className={highlightedButton === "home" ? "navbar-highlighted" : ""}>
-          <Link to="/">{translate(lang, "home")}</Link>
+          <Link to="/">{translate(lang, "navBar.home")}</Link>
         </li>
         <li className={highlightedButton === "ai" ? "navbar-highlighted" : ""}>
-          <Link to="/ai">{translate(lang, "ai")}</Link>
+          <Link to="/ai">{translate(lang, "navBar.ai")}</Link>
         </li>
         <li className={highlightedButton === "projects" ? "navbar-highlighted" : ""}>
-          <Link to="/projects">{translate(lang, "projects")}</Link>
+          <Link to="/projects">{translate(lang, "navBar.projects")}</Link>
         </li>
         <li className={highlightedButton === "contact" ? "navbar-highlighted" : ""}>
-          <Link to="/contact">{translate(lang, "contact")}</Link>
+          <Link to="/contact">{translate(lang, "navBar.contact")}</Link>
         </li>
         <li className={highlightedButton === "login" ? "navbar-highlighted" : ""}>
-          <Link to="/login">{translate(lang, "login")}</Link>
+          <Link to="/login">{translate(lang, "navBar.login")}</Link>
         </li>
       </ul>
 

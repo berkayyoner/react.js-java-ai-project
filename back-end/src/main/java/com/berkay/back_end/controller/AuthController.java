@@ -1,3 +1,16 @@
+package com.berkay.back_end.controller;
+
+import com.berkay.back_end.repository.UserRepository;
+import com.berkay.back_end.security.JwtUtil;
+import com.berkay.back_end.model.User;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {

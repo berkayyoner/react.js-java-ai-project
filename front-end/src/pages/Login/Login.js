@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../slices/authSlice"; // ✅ thunk import ediyoruz
+import NavBar from "../../components/NavBar/NavBar";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -14,6 +15,7 @@ function Login() {
 
   return (
     <div>
+      <NavBar selectedButton="login" />
       <h1>Giriş Yap</h1>
       <input
         type="text"

@@ -1,8 +1,11 @@
 {
-  "home": "Ana Sayfa",
-  "ai": "Yapay Zeka",
-  "projects": "Projeler",
-  "contact": "İletişim",
-  "login": "Giriş",
-  "language": "Dil"
+  "navBar": {
+    "title": "Home",
+    "ai": "AI",
+    "projects": "Projects",
+    "contact": "Contact",
+    "login": "Login",
+    "language": "Language"
+  }
+  
 }

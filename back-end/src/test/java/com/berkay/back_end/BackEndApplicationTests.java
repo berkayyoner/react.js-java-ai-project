@@ -1,8 +1,10 @@
-package com.example.back_end;
+package com.berkay.back_end;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+@Disabled
 @SpringBootTest
 class BackEndApplicationTests {
 

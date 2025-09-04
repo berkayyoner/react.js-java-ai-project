@@ -1,8 +1,15 @@
 {
-  "home": "Home",
-  "ai": "AI",
-  "projects": "Projects",
-  "contact": "Contact",
-  "login": "Login",
-  "language": "Language"
+  "navBar": {
+    "home": "Home",
+    "ai": "AI",
+    "projects": "Projects",
+    "contact": "Contact",
+    "login": "Login",
+    "language": "Language"
+  },
+
+  "home": {
+    "title": "Hello, I'm Berkay Öner 👋",
+    "description": "It's my portfolio website."
+  }
 }
