@@ -5,6 +5,7 @@ import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import useLanguage from "../../hooks/useLanguage";
 import "./NavBar.css";
 import logo from "../../assets/images/logo.png";
+import styled from "@emotion/styled";
 
 function NavBar({ selectedButton }) {
   const [highlightedButton, setHighlightedButton] = useState(null);
@@ -19,21 +20,21 @@ function NavBar({ selectedButton }) {
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="navbar-logo" />
       </div>
 
-      <ul>
-        <li className={highlightedButton === "home" ? "navbar-highlighted" : ""}>
-          <Link to="/">{translate(lang, "navBar.home")}</Link>
+      <ul className="navbar-links">
+        <li className={highlightedButton === "home" ? "navbar-highlighted" : "navbar-list-item"}>
+          <Link className="navbar-link" to="/">{translate(lang, "navBar.home")}</Link>
         </li>
-        <li className={highlightedButton === "ai" ? "navbar-highlighted" : ""}>
-          <Link to="/ai">{translate(lang, "navBar.ai")}</Link>
+        <li className={highlightedButton === "ai" ? "navbar-highlighted" : "navbar-list-item"}>
+          <Link className="navbar-link" to="/ai">{translate(lang, "navBar.ai")}</Link>
         </li>
-        <li className={highlightedButton === "projects" ? "navbar-highlighted" : ""}>
-          <Link to="/projects">{translate(lang, "navBar.projects")}</Link>
+        <li className={highlightedButton === "projects" ? "navbar-highlighted" : "navbar-list-item"}>
+          <Link className="navbar-link" to="/projects">{translate(lang, "navBar.projects")}</Link>
         </li>
-        <li className={highlightedButton === "login" ? "navbar-highlighted" : ""}>
-          <Link to="/login">{translate(lang, "navBar.login")}</Link>
+        <li className={highlightedButton === "login" ? "navbar-highlighted" : "navbar-list-item"}>
+          <Link className="navbar-link" to="/login">{translate(lang, "navBar.login")}</Link>
         </li>
       </ul>
 

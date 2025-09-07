@@ -19,7 +19,7 @@
   margin-right: 10px;
 }
 
-ul {
+.navbar-links {
   display: flex;
   gap: 20px;
   list-style: none;
@@ -27,27 +27,23 @@ ul {
   padding: 0;
 }
 
-ul li a {
+.navbar-links .navbar-list-item .navbar-link {
   text-decoration: none;
   color: #b6b6b6;
   transition: all 0.3s ease;
 }
 
-ul li a:hover {
-  color: white;
-  transform: scale(1.1);
-}
-
-li:hover {
+.navbar-list-item:hover {
   transform: scale(1.1);
   transition: all 0.3s ease;
 }
 
-.navbar-highlighted a {
+.navbar-highlighted .navbar-link {
   color: white;
+  text-decoration: none;
 }
 
-.logo {
+.navbar-logo {
   height: 40px;
   width: auto;
 }

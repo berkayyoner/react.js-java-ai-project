@@ -3,12 +3,20 @@ import { translate } from "../../utils/translate";
 import image from "../../assets/images/profile.png";
 import "./Home.css";
 import useLanguage from "../../hooks/useLanguage";
+import useResponsive from "../../hooks/useResponsive";
 import config from "../../config.json";
 
 function Home() {
   const { lang } = useLanguage();  
+  const { up, between } = useResponsive();
 
   const mailHref = `mailto:${config.email}`;
+
+  const columnsClass = up("lg")
+    ? "grid-desktop"
+    : between("md", "lg")
+    ? "grid-tablet"
+    : "grid-mobile";
 
   return (
     <div className="home">
@@ -26,17 +34,17 @@ function Home() {
 
         <div className="horizontal-line" />
 
-        <div className="main-columns">
+        <div className={`main-columns ${columnsClass}`}>
           <section className="education-column">
             <h2 className="title">{translate(lang, "home.education")}</h2>
             <br/>
             <ul className="list">
-              <li>
+              <li className="education-list-item">
                 <h3 className="title">{translate(lang, "home.educationItem2")}</h3>
                 <p>{translate(lang, "home.educationItem2Description")}</p>
                 <p>{translate(lang, "home.educationItem2Year")}</p>
               </li>
-              <li>
+              <li className="education-list-item">
                 <h3 className="title">{translate(lang, "home.educationItem1")}</h3>
                 <p>{translate(lang, "home.educationItem1Description")}</p>
                 <p>{translate(lang, "home.educationItem1Year")}</p>

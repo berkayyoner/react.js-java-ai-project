@@ -1,4 +1,3 @@
-/* GENEL */
 .cv {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: clamp(16px, 3vw, 32px);
-  text-align: center;            /* ✅ genel metinler merkezde */
+  text-align: center;           
   white-space: pre-wrap;
 }
 
@@ -14,39 +13,36 @@
 .description { 
   max-width: 68ch; 
   width: 100%;
-  margin: 0 auto;                /* kutu ortada */
+  margin: 0 auto;               
 }
 
-/* ÜST KISIM (foto solda, metin sağda) */
 .top-section {
   width: 100%;
   display: grid;
-  grid-template-columns: auto 1fr;     /* sol: görsel, sağ: yazı */
+  grid-template-columns: auto 1fr; 
   align-items: center;
   justify-content: center;
   gap: clamp(16px, 3vw, 40px);
 }
 
 .profile-pic {
-  width: clamp(160px, 22vw, 280px);    /* esnek boyut */
+  width: clamp(160px, 22vw, 280px);   
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.75), rgba(0,0,0,0));
   transition: transform .3s ease;
 }
-/* İsteğe bağlı hover */
-.profile-pic:hover { transform: scale(1.1); }
+.profile-pic:hover { transform: scale(1.1); transition: all 0.3s ease; }
 
-/* Sağ taraftaki başlık + açıklama bloğu */
 .hero-copy {
   display: flex;
   flex-direction: column;
-  align-items: center;           /* başlık ve açıklama merkezde */
+  align-items: center;          
   gap: 10px;
 }
+.hero-copy:hover { transform: scale(1.02); transition: all 0.3s ease; }
 
-/* İnce yatay çizgi */
 .horizontal-line {
   width: min(240px, 40%);
   height: 2px;
@@ -55,54 +51,79 @@
   opacity: .8;
 }
 
-/* ANA SÜTUNLAR – mevcut yapını bozma, sadece merkezle */
 .main-columns {
-  /* kapsayıcıyı ortala ve genişliği sınırla */
   max-width: 1280px;
   width: min(92vw, 1280px);
   margin: 0 auto;
 
-  /* FLEX yerine GRID */
   display: grid;
 
-  /* 5 kolon: education | sep | contact | sep | experiences */
+  /* education | sep | contact | sep | experiences */
   grid-template-columns:
     minmax(220px, 1fr)   /* Education */
-    1px                  /* dikey ayırıcı */
+    1px                 
     minmax(260px, 1fr)   /* Contact */
-    1px                  /* dikey ayırıcı */
-    minmax(380px, 1.2fr) /* Experiences (biraz daha geniş) */;
+    1px                 
+    minmax(380px, 1.2fr) /* Experiences */;
 
   column-gap: clamp(24px, 4vw, 48px);
   align-items: start;
-  /* grid wrap yoktur; yan yana kalırlar */
+}
+
+/* Varsayılan (desktop) – 5 kolon: Edu | sep | Contact | sep | Exp */
+.main-columns.grid-desktop {
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1fr)
+    1px
+    minmax(260px, 1fr)
+    1px
+    minmax(380px, 1.2fr);
+  column-gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+/* Tablet’te de yan yana, ama daha sıkı boşluk */
+.main-columns.grid-tablet {
+  display: grid;
+  grid-template-columns:
+    minmax(200px, 1fr)
+    1px
+    minmax(220px, 1fr)
+    1px
+    minmax(320px, 1.1fr);
+  column-gap: clamp(16px, 3vw, 28px);
+}
+
+/* Mobilde tek sütun (istersen yine yan yana bırakabilirsin) */
+.main-columns.grid-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
 }
 
 
-/* Dikey ayırıcı (opsiyonel) */
 .vertical-line {
   width: 1px;
   background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
-  align-self: stretch; /* yüksekliği her zaman sütun yüksekliği kadar olsun */
+  align-self: stretch;
   justify-self: center;
   opacity: .9;
 }
 
-/* Sütunların içini de merkezle */
 .education-column,
 .contact-column,
 .experiences-column {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* genel metinler merkezde */
+  align-items: center;
   gap: 10px;
-  /* width vermeyelim; grid pay etsin */
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  align-items: center;                  /* liste öğeleri ortada */
+  align-items: center;
   gap: 10px;
   list-style: none;
   margin: 0; padding: 0;
@@ -110,28 +131,29 @@
 
 .sized-list-item {
   width: 100%;
-  max-width: 65ch;   /* okunabilir satır uzunluğu */
-  margin: 0 auto;    /* kart ortada */
+  max-width: 65ch;
+  margin: 0 auto; 
 }
+.sized-list-item:hover { transform: scale(1.02); transition: all 0.3s ease; }
+.education-list-item:hover { transform: scale(1.08); transition: all 0.3s ease; }
+
 .experience-description {
-  text-align: left;  /* sadece açıklama soldan */
+  text-align: left;
   color: #b6b6b6;
 }
 
 .contact-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   transition: all 0.2s ease;
 }
 
-/* Link renkleri (merkez hizaya uygun) */
 .link { color: #b6b6b6; text-decoration: none; }
 .link:hover { color: #fff; }
 
-/* Mobil kırılım – üst kısmı alta indir (foto üstte, yazı altta) */
 @media (max-width: 900px) {
   .main-columns {
-    grid-template-columns: 1fr;  /* tek sütun */
+    grid-template-columns: 1fr;
     row-gap: 24px;
   }
-  .v-sep { display: none; }
+  .vertical-line { display: none; }
 }
