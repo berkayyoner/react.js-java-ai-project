@@ -10,6 +10,16 @@
 
   "home": {
     "title": "Hello, I'm Berkay Öner 👋",
-    "description": "It's my portfolio website."
+    "description": "I graduated from Üsküdar University as a Software Engineer. I started my first full-time IT job at Çelebi Aviation Holding in May 2024. I focus on developing software projects and managing IT processes. I am a social person who likes to collaborate with my colleagues. I provide support for the agreement, inventory and full-stack software development processes of the department I work in, and I was also solely responsible for the budget and payment processes in my IT department. In addition to standard software development processes, I try to benefit all IT processes by taking more responsibility for management processes.",
+    "contact": "Contact Information",
+    "email": "Email",
+    "linkedIn": "LinkedIn",
+    "linkedInLink": "Click Here",
+    "education": "Education",
+    "experiences": "Experiences",
+    "educationItem1": "Maltepe University",
+    "educationItem1Description": "Computer Programming",
+    "educationItem2": "Üsküdar University",
+    "educationItem2Description": "Software Engineering"
   }
 }

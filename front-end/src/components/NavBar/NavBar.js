@@ -32,9 +32,6 @@ function NavBar({ selectedButton }) {
         <li className={highlightedButton === "projects" ? "navbar-highlighted" : ""}>
           <Link to="/projects">{translate(lang, "navBar.projects")}</Link>
         </li>
-        <li className={highlightedButton === "contact" ? "navbar-highlighted" : ""}>
-          <Link to="/contact">{translate(lang, "navBar.contact")}</Link>
-        </li>
         <li className={highlightedButton === "login" ? "navbar-highlighted" : ""}>
           <Link to="/login">{translate(lang, "navBar.login")}</Link>
         </li>

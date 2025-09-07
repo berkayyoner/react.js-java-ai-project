@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProjects, createProject } from "../../slices/projectSlice";
+import NavBar from "../../components/NavBar/NavBar";
 
 function Projects() {
   const dispatch = useDispatch();
@@ -27,10 +28,16 @@ function Projects() {
     setGithubUrl("");
   };
 
-  if (loading) return <p>Yükleniyor...</p>;
+  if (loading) return (
+    <div>
+      <NavBar selectedButton="projects" />
+      <p>Yükleniyor...</p>
+    </div>
+  );
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div>
+      <NavBar selectedButton="projects" />
       <h1>Projelerim</h1>
 
       {/* Proje ekleme formu */}

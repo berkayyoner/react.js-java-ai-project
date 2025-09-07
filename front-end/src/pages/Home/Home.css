@@ -1,3 +1,105 @@
 .home {
+
+}
+
+.title {
+  color: white;
+}
+
+.cv {
   text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top-section {
+  width: 100%;
+  align-items: center;
+}
+
+.description {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin-top: -170px;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.horizontal-line {
+  width: 20%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 30px auto;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 300px;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  margin: 20px auto;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-item:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.link {
+  color: #b6b6b6;
+}
+
+.link:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.main-columns {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(24px, 6vw, 80px);
+  flex-wrap: wrap;
+}
+
+.column {
+  
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
