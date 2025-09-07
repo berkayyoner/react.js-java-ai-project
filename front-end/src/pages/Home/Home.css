@@ -1,105 +1,137 @@
-.home {
-
-}
-
-.title {
-  color: white;
-}
-
+/* GENEL */
 .cv {
-  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 32px);
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  gap: clamp(16px, 3vw, 32px);
+  text-align: center;            /* ✅ genel metinler merkezde */
+  white-space: pre-wrap;
 }
 
+.title { color: #fff; margin: 0 0 .35rem; }
+.description { 
+  max-width: 68ch; 
+  width: 100%;
+  margin: 0 auto;                /* kutu ortada */
+}
+
+/* ÜST KISIM (foto solda, metin sağda) */
 .top-section {
   width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;     /* sol: görsel, sağ: yazı */
   align-items: center;
-}
-
-.description {
-  text-align: center;
-  width: 60%;
-  margin: 0 auto;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 40px);
 }
 
 .profile-pic {
-  width: 500px;
-  height: 500px;
+  width: clamp(160px, 22vw, 280px);    /* esnek boyut */
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  margin-top: -170px;
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.75), rgba(0,0,0,0));
+  transition: transform .3s ease;
 }
+/* İsteğe bağlı hover */
+.profile-pic:hover { transform: scale(1.1); }
 
-.profile-pic:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
-.horizontal-line {
-  width: 20%;
-  height: 2px;
-  background-color: #ffffff;
-  margin: 30px auto;
-}
-
-.vertical-line {
-  width: 2px;
-  height: 300px;
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
-  margin: 20px auto;
-}
-
-.contact-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.contact-item {
+/* Sağ taraftaki başlık + açıklama bloğu */
+.hero-copy {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;           /* başlık ve açıklama merkezde */
+  gap: 10px;
 }
 
-.contact-item:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease;
+/* İnce yatay çizgi */
+.horizontal-line {
+  width: min(240px, 40%);
+  height: 2px;
+  background-color: #ffffff;
+  margin: 12px auto 24px;
+  opacity: .8;
 }
 
-.link {
-  color: #b6b6b6;
-}
-
-.link:hover {
-  color: white;
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
+/* ANA SÜTUNLAR – mevcut yapını bozma, sadece merkezle */
 .main-columns {
-  width: min(1200px, 90%);
+  /* kapsayıcıyı ortala ve genişliği sınırla */
+  max-width: 1280px;
+  width: min(92vw, 1280px);
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: clamp(24px, 6vw, 80px);
-  flex-wrap: wrap;
+
+  /* FLEX yerine GRID */
+  display: grid;
+
+  /* 5 kolon: education | sep | contact | sep | experiences */
+  grid-template-columns:
+    minmax(220px, 1fr)   /* Education */
+    1px                  /* dikey ayırıcı */
+    minmax(260px, 1fr)   /* Contact */
+    1px                  /* dikey ayırıcı */
+    minmax(380px, 1.2fr) /* Experiences (biraz daha geniş) */;
+
+  column-gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+  /* grid wrap yoktur; yan yana kalırlar */
 }
 
-.column {
-  
+
+/* Dikey ayırıcı (opsiyonel) */
+.vertical-line {
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(255,255,255,0));
+  align-self: stretch; /* yüksekliği her zaman sütun yüksekliği kadar olsun */
+  justify-self: center;
+  opacity: .9;
+}
+
+/* Sütunların içini de merkezle */
+.education-column,
+.contact-column,
+.experiences-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* genel metinler merkezde */
+  gap: 10px;
+  /* width vermeyelim; grid pay etsin */
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;                  /* liste öğeleri ortada */
   gap: 10px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.sized-list-item {
+  width: 100%;
+  max-width: 65ch;   /* okunabilir satır uzunluğu */
+  margin: 0 auto;    /* kart ortada */
+}
+.experience-description {
+  text-align: left;  /* sadece açıklama soldan */
+  color: #b6b6b6;
+}
+
+.contact-item:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Link renkleri (merkez hizaya uygun) */
+.link { color: #b6b6b6; text-decoration: none; }
+.link:hover { color: #fff; }
+
+/* Mobil kırılım – üst kısmı alta indir (foto üstte, yazı altta) */
+@media (max-width: 900px) {
+  .main-columns {
+    grid-template-columns: 1fr;  /* tek sütun */
+    row-gap: 24px;
+  }
+  .v-sep { display: none; }
 }
